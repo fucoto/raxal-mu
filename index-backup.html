@@ -1,0 +1,50 @@
+
+<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v$npm_package_version/dist/aframe-physics-system.min.js"></script>
+
+<a-scene loading-screen="dotsColor: red; backgroundColor: black" physics="debug: true">
+  <a-assets>
+  <a-asset-item
+          id="music"         
+          src="https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/Pswagi.mp3"
+        ></a-asset-item></a-assets>
+  <a-entity camera="" position="-24.381 4.011 10.513" jump-ability="" kinematic-body="" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" ></a-entity>
+ 
+  <a-assets>
+    
+    
+    <a-asset-item id="base" src="https://cdn.glitch.me/4cdfa87b-c2eb-4d50-a290-9f045c67d607/roundt.glb?v=1705498968870"></a-asset-item>
+    <a-asset-item id="land" src="https://cdn.glitch.me/4cdfa87b-c2eb-4d50-a290-9f045c67d607/plane1.glb?v=1705502194069"></a-asset-item>
+  </a-assets>
+  
+   <a-gltf-model src="#base" scale="30 30 30" position="0 0 -5"></a-gltf-model>
+  <a-assets>
+    <a-asset-item id="ufo" src="https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/soucoupevolantedemarsattack_1.glb?v=1705502301758"></a-asset-item>
+     
+  </a-assets>
+   
+  <a-gltf-model src="#land" scale="30 30 30" position="0 0 -5" static-body ></a-gltf-model>
+ <a-gltf-model src="#ufo" scale="0.03 0.03 0.03" position="47.31351 30.71973 -20.46787" gltf-model="#ufo" rotation="-12.95 -2.45 -18.08"></a-gltf-model>
+    
+      
+       <a-assets>
+    <a-asset-item id="object1" src="https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/qlone_root1.glb?v=1705504110743"></a-asset-item>
+  </a-assets>
+      
+      <a-assets>
+    <a-asset-item id="object2" src="https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/qlone_root2.glb?v=1705504140724"></a-asset-item>      
+  </a-assets>
+      <a-gltf-model src="#object2" scale="35 35 35" position="-18.01955 5.75991 -36.21304" gltf-model="#object2" rotation="-0.02291831180523293 89.94635242640742 69.28893208076072"></a-gltf-model>
+      <a-gltf-model src="#object1" scale="32 32 32" position="-12.8003 7.17551 -36.54401" gltf-model="#object1" rotation="0 90.00021045914971 73.6588811842235"></a-gltf-model>
+      <a-assets>
+    <img id="sky" src="https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/mountain.png?v=1705498370436">
+  </a-assets>
+  <a-sky src="#sky"></a-sky>
+  <a-sound src="https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/Pswagi.mp3?v=1705495349524" autoplay="true" position="-24.381 4.011 10.513" volume="10" preload="auto"></a-sound>
+  <a-assets>
+  <a-entity position="0 0 0" sound="scr: https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/Pswagi.mp3?v=1705495349524; autoplay: true; refDistance: 100; positional: false"></a-entity>
+</a-assets>
+    <a-entity light="color: #ee8c1b; intensity: 0.6; castShadow: true" position="-0.5 1 1" data-aframe-default-light="" aframe-injected="" visible=""></a-entity>
+</a-scene>
+
+<script src="index.js"></script>
