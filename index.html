@@ -1,108 +1,184 @@
-
 <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
 <!--<script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v$npm_package_version/dist/aframe-physics-system.min.js"></script>-->
 
-<a-scene log="Scene loaded" loading-screen="dotsColor: red; backgroundColor: black" physics="debug: true"
-vr-mode-ui="enabled: false"
-xr-mode-ui="enabled: false"
-gltf-model="dracoDecoderPath: https://www.gstatic.com/draco/v1/decoders/;
+<a-scene
+  log="Scene loaded"
+  loading-screen="dotsColor: red; backgroundColor: black"
+  physics="debug: true"
+  vr-mode-ui="enabled: false"
+  xr-mode-ui="enabled: false"
+  gltf-model="dracoDecoderPath: https://www.gstatic.com/draco/v1/decoders/;
 basisTranscoderPath:https://cdn.jsdelivr.net/npm/super-three@0.141.0/examples/js/libs/basis/;
-meshoptDecoderPath: https://unpkg.com/meshoptimizer@~0.18.1/meshopt_decoder.js;">
+meshoptDecoderPath: https://unpkg.com/meshoptimizer@~0.18.1/meshopt_decoder.js;"
+>
   <a-assets>
-  <a-asset-item
-          id="music"         
-          src="https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/Pswagi-c.mp3"
-        ></a-asset-item></a-assets>
-  <a-entity camera="" position="-24.381 4.011 10.513" jump-ability="" kinematic-body="" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" ></a-entity>
- 
+    <a-asset-item id="music" src="./asset/Pswagi-c.mp3"></a-asset-item
+  ></a-assets>
+  <a-entity
+    camera=""
+    position="-24.381 4.011 10.513"
+    jump-ability=""
+    kinematic-body=""
+    wasd-controls=""
+    rotation=""
+    look-controls=""
+    aframe-injected=""
+    data-aframe-inspector-original-camera=""
+  ></a-entity>
+
   <a-assets>
-    <a-asset-item id="base" src="https://cdn.glitch.me/4cdfa87b-c2eb-4d50-a290-9f045c67d607/roundt-cc.glb?v=1705498968870"></a-asset-item>
-    <a-asset-item id="land" src="https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/plain1_re_1.glb?v=1724496671591"></a-asset-item>
+    <a-asset-item id="base" src="./asset/roundt-cc.glb"></a-asset-item>
+    <a-asset-item id="land" src="./asset/plain1_re_1.glb"></a-asset-item>
   </a-assets>
-  
-   <a-gltf-model src="#base" scale="30 30 30" position="0 0 -5"></a-gltf-model>
+
+  <a-gltf-model src="#base" scale="30 30 30" position="0 0 -5"></a-gltf-model>
   <a-assets>
-    <a-asset-item id="ufo" src="https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/soucoupevolantedemarsattack_1-cc.glb?v=1705502301758"></a-asset-item>
-     
+    <a-asset-item
+      id="ufo"
+      src="./asset/soucoupevolantedemarsattack_1-cc.glb"
+    ></a-asset-item>
   </a-assets>
-   
-  <a-gltf-model src="#land" scale="30 30 30" position="0 0 -5" static-body ></a-gltf-model>
- <a-gltf-model src="#ufo" scale="0.03 0.03 0.03" position="47.31351 30.71973 -20.46787" gltf-model="#ufo" rotation="-12.95 -2.45 -18.08"></a-gltf-model>
-    
-      <a-box position="-14.189 -2.560 -17.894" scale="25 0.5 25" rotation="0 0 4.5" material="opacity: 0.4; ambientOcclusionMapIntensity: 0.4; color: #2e6dff; roughness: 0"
-             sound="src: https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/Kori_Story.m4a?v=1724411232377;
+
+  <a-gltf-model
+    src="#land"
+    scale="30 30 30"
+    position="0 0 -5"
+    static-body
+  ></a-gltf-model>
+  <a-gltf-model
+    src="#ufo"
+    scale="0.03 0.03 0.03"
+    position="47.31351 30.71973 -20.46787"
+    gltf-model="#ufo"
+    rotation="-12.95 -2.45 -18.08"
+  ></a-gltf-model>
+
+  <a-box
+    position="-14.189 -2.560 -17.894"
+    scale="25 0.5 25"
+    rotation="0 0 4.5"
+    material="opacity: 0.4; ambientOcclusionMapIntensity: 0.4; color: #2e6dff; roughness: 0"
+    sound="src: ./asset/Kori_Story.m4a;
                     on: click;
                     volume: 3;
                     refDistance: 1;
                     loop: true;
                     rolloffFactor: 3; "
-             ></a-box>
-  <a-box position="-26.726 5.04905 22.27937" scale="3 3 3" rotation="0 0 4.5" material="opacity: 0; ambientOcclusionMapIntensity: 0.4; color: #2e6dff; roughness: 0"
-             sound="src: https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/V2-Fetle-FINDING-TEMAHAHOI-CYBERSPACE.ogg?v=1724504681130;
+  ></a-box>
+  <a-box
+    position="-26.726 5.04905 22.27937"
+    scale="3 3 3"
+    rotation="0 0 4.5"
+    material="opacity: 0; ambientOcclusionMapIntensity: 0.4; color: #2e6dff; roughness: 0"
+    sound="src: ./asset/V2-Fetle-FINDING-TEMAHAHOI-CYBERSPACE.ogg;
                     on: click;
                     volume: 2;
                     refDistance: 1;
                     loop: true;
                     rolloffFactor: 3; "
-             ></a-box>
-   <a-box position="32.330 1.992 -31.862" scale="3 3 3" rotation="0 0 4.5" material="opacity: 0; ambientOcclusionMapIntensity: 0.4; color: #2e6dff; roughness: 0"
-             sound="src: https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/Sinkuy_Temahahoi.ogg?v=1724504678036;
+  ></a-box>
+  <a-box
+    position="32.330 1.992 -31.862"
+    scale="3 3 3"
+    rotation="0 0 4.5"
+    material="opacity: 0; ambientOcclusionMapIntensity: 0.4; color: #2e6dff; roughness: 0"
+    sound="src: ./asset/Sinkuy_Temahahoi.ogg;
                     on: click;
                     volume: 2;
                     refDistance: 1;
                     loop: true;
                     rolloffFactor: 3; "
-             ></a-box>
-  <a-box position="30.480 2.877 0.958" scale="3 3 3" rotation="0 0 4.5" material="opacity: 0; ambientOcclusionMapIntensity: 0.4; color: #2e6dff; roughness: 0"
-             sound="src: https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/Natalie-Tso_Walking-to-Temahahoi.ogg?v=1724504679944;
+  ></a-box>
+  <a-box
+    position="30.480 2.877 0.958"
+    scale="3 3 3"
+    rotation="0 0 4.5"
+    material="opacity: 0; ambientOcclusionMapIntensity: 0.4; color: #2e6dff; roughness: 0"
+    sound="src: ./asset/Natalie-Tso_Walking-to-Temahahoi.ogg;
                     on: click;
                     volume: 3;
                     refDistance: 1;
                     loop: true;
                     rolloffFactor: 3; "
-             ></a-box>
-   <a-box position="13.315 4.534 27.946" scale="3 3 3" rotation="0 0 4.5" material="opacity: 0; ambientOcclusionMapIntensity: 0.4; color: #2e6dff; roughness: 0"
-             sound="src: https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/Mel-Melissa_Temahahoi.ogg?v=1724504677510;
+  ></a-box>
+  <a-box
+    position="13.315 4.534 27.946"
+    scale="3 3 3"
+    rotation="0 0 4.5"
+    material="opacity: 0; ambientOcclusionMapIntensity: 0.4; color: #2e6dff; roughness: 0"
+    sound="src: ./asset/Mel-Melissa_Temahahoi.ogg;
                     on: click;
                     volume: 4;
                     refDistance: 1;
                     loop: true;
                     rolloffFactor: 3; "
-             ></a-box>
-  <a-box position="-18.020 2.760 -36.213" scale="3 3 3" rotation="0 0 4.5" material="opacity: 0; ambientOcclusionMapIntensity: 0.4; color: #2e6dff; roughness: 0"
-             sound="src: https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/Pswagi.mp3?v=1705495349524;
+  ></a-box>
+  <a-box
+    position="-18.020 2.760 -36.213"
+    scale="3 3 3"
+    rotation="0 0 4.5"
+    material="opacity: 0; ambientOcclusionMapIntensity: 0.4; color: #2e6dff; roughness: 0"
+    sound="src: ./asset/Pswagi.mp3;
                     on: click;
                     volume: 2;
                     refDistance: 1;
                     loop: true;
                     rolloffFactor: 3; "
-             ></a-box>
-       <a-assets>
-    <a-asset-item id="object1" src="https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/qlone_root1-reduce_rebake-cc.glb?v=1705504110743"></a-asset-item>
+  ></a-box>
+  <a-assets>
+    <a-asset-item
+      id="object1"
+      src="./asset/qlone_root1-reduce_rebake-cc.glb"
+    ></a-asset-item>
   </a-assets>
-      
-      <a-assets>
-    <a-asset-item id="object2" src="https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/qlone_root2-reduce_rebake-cc.glb?v=1705504140724"></a-asset-item>      
+
+  <a-assets>
+    <a-asset-item
+      id="object2"
+      src="./asset/qlone_root2-reduce_rebake-cc.glb"
+    ></a-asset-item>
   </a-assets>
-      <a-gltf-model src="#object2" scale="35 35 35" position="-18.020 5.760 -38.568" gltf-model="#object2" rotation="-0.02291831180523293 89.94635242640742 69.28893208076072"></a-gltf-model>
-      <a-gltf-model src="#object1" scale="32 32 32" position="-12.800 7.176 -38.386" gltf-model="#object1" rotation="0 90.00021045914971 73.6588811842235"></a-gltf-model>
-      <a-assets>
-    <img id="sky" src="https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/mountain-c.png?v=1705498370437" crossorigin="anonymous">
+  <a-gltf-model
+    src="#object2"
+    scale="35 35 35"
+    position="-18.020 5.760 -38.568"
+    gltf-model="#object2"
+    rotation="-0.02291831180523293 89.94635242640742 69.28893208076072"
+  ></a-gltf-model>
+  <a-gltf-model
+    src="#object1"
+    scale="32 32 32"
+    position="-12.800 7.176 -38.386"
+    gltf-model="#object1"
+    rotation="0 90.00021045914971 73.6588811842235"
+  ></a-gltf-model>
+  <a-assets>
+    <img id="sky" src="./asset/mountain-c.png" crossorigin="anonymous" />
   </a-assets>
   <a-sky src="#sky"></a-sky>
-  <a-sound srcc="https://cdn.glitch.global/4cdfa87b-c2eb-4d50-a290-9f045c67d607/Pswagi.mp3?v=1705495349524" autoplay="true" position="-24.381 4.011 10.513" volume="10" preload="auto"></a-sound>
-  <a-assets>
-  
-</a-assets>
-    <a-entity light="color: #ee8c1b; intensity: 0.6; castShadow: true" position="-0.5 1 1" data-aframe-default-light="" aframe-injected="" visible=""></a-entity>
+  <a-sound
+    src="./asset/Pswagi.mp3"
+    autoplay="true"
+    position="-24.381 4.011 10.513"
+    volume="10"
+    preload="auto"
+  ></a-sound>
+  <a-assets> </a-assets>
+  <a-entity
+    light="color: #ee8c1b; intensity: 0.6; castShadow: true"
+    position="-0.5 1 1"
+    data-aframe-default-light=""
+    aframe-injected=""
+    visible=""
+  ></a-entity>
 </a-scene>
 
 <script src="index.js?v=0.1"></script>
 
 <style>
-.a-loader-title:after {
+  .a-loader-title:after {
     content: "Loading, please wait\2026";
     color: red;
-    font-weight: bold
-}
+    font-weight: bold;
+  }
 </style>
