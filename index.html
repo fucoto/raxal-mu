@@ -15,6 +15,8 @@
         align-items: center;
         justify-content: center;
         z-index: 9999;
+        opacity: 1;
+        transition: opacity 0.5s ease;
       }
 
       .bar {
@@ -30,6 +32,7 @@
         background: red;
         transition: width 0.2s;
       }
+
     </style>
   </head>
   <body>
@@ -223,24 +226,38 @@ meshoptDecoderPath: https://unpkg.com/meshoptimizer@~0.18.1/meshopt_decoder.js;"
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const assets = document.querySelector("a-assets");
+        const scene = document.querySelector("a-scene");
         const loading = document.getElementById("loading");
         const text = document.getElementById("loading-text");
         const bar = document.getElementById("bar-fill");
 
-        let loaded = 0;
-        let total = assets.children.length;
+        const allAssets = document.querySelectorAll("a-assets > a-asset-item, a-assets > img, a-assets > video");
 
-        assets.addEventListener("loaded", () => {
-          loading.style.display = "none";
+        let loaded = 0;
+        let total = allAssets.length;
+
+        if (total === 0) {
+          hideLoading();
+          return;
+        }
+
+        scene.addEventListener("loaded", () => {
+          hideLoading();
         });
 
-        assets.addEventListener("asset-loaded", () => {
+        scene.addEventListener("asset-loaded", () => {
           loaded++;
           const percent = Math.round((loaded / total) * 100);
           text.textContent = `Loading ${percent}%`;
           bar.style.width = percent + "%";
         });
+
+        function hideLoading(){
+          setTimeout(()=>{
+            loading.style.opacity = "0";
+            setTimeout(() => loading.style.display = "none", 500);
+          },800);
+        }
       });
     </script>
   </body>
